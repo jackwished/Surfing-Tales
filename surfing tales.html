@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surfing Tales | Surf • Hostel • Cafe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0a0d14',
+              card: '#111726',
+              accent: '#ff2a7e', // Pink accent matching logo
+              cyan: '#00f0ff',
+              lime: '#bfff00'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0a0d14; color: #fff; overflow-x: hidden; }
+    h1, h2, h3, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+    .glass { background: rgba(17, 23, 38, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .neon-text-pink { text-shadow: 0 0 10px rgba(255, 42, 126, 0.7); }
+    .neon-text-cyan { text-shadow: 0 0 10px rgba(0, 240, 255, 0.7); }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-brand-dark text-gray-100">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-2">
+        <span class="text-2xl font-bold tracking-tighter text-brand-accent font-heading">SURFING TALES</span>
+      </a>
+      <div class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#about" class="hover:text-brand-cyan transition">Vibe</a>
+        <a href="#packages" class="hover:text-brand-cyan transition">Waves & Stays</a>
+        <a href="#gallery" class="hover:text-brand-cyan transition">Gallery</a>
+        <a href="#location" class="hover:text-brand-cyan transition">Location</a>
+      </div>
+      <a href="#booking" class="bg-brand-accent hover:bg-opacity-90 text-white px-5 py-2.5 rounded-full text-sm font-bold transition transform hover:scale-105 shadow-lg shadow-brand-accent/30">
+        Book Wave
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+    <!-- Background Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-brand-cyan/15 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto text-center z-10 space-y-8">
+      <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass border border-brand-accent/30 text-xs font-semibold text-brand-lime animate-pulse">
+        <span class="w-2 h-2 rounded-full bg-brand-lime"></span>
+        <span>Revdanda Beach, Alibag • Open Daily</span>
+      </div>
+      
+      <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight leading-none uppercase">
+        Catch <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-lime neon-text-pink">Good Vibes</span> & Great Waves.
+      </h1>
+      
+      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light">
+        Your ultimate coastal escape. Learn to surf, paddle into sunsets, and crash in our aesthetic surf hostel right by the Arabian Sea.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+        <a href="#packages" class="w-full sm:w-auto bg-gradient-to-r from-brand-cyan to-brand-lime text-brand-dark px-8 py-4 rounded-2xl font-bold text-base hover:opacity-90 transition shadow-xl shadow-brand-cyan/20">
+          Explore Experiences
+        </a>
+        <a href="#booking" class="w-full sm:w-auto glass border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-base hover:bg-white/10 transition">
+          Book Online
+        </a>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="grid grid-cols-3 gap-6 pt-12 border-t border-white/10 max-w-2xl mx-auto text-left">
+        <div>
+          <h4 class="text-3xl font-bold text-brand-accent">500+</h4>
+          <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">First-Time Surfers</p>
+        </div>
+        <div>
+          <h4 class="text-3xl font-bold text-brand-cyan">4.9 ★</h4>
+          <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Google Rating</p>
+        </div>
+        <div>
+          <h4 class="text-3xl font-bold text-brand-lime">100%</h4>
+          <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Stoke Guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Vibe Section -->
+  <section id="about" class="py-24 px-6 relative">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <span class="text-brand-cyan font-bold text-xs uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-md">The Culture</span>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight">More Than A Surf School. It's A Community.</h2>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Founded by ocean lovers, Surfing Tales brings the authentic coastal lifestyle to Revdanda. Whether you're chasing your first green wave or looking for a community to unwind with, our doors are always open.
+        </p>
+        <div class="grid grid-cols-2 gap-6 pt-4">
+          <div class="glass p-5 rounded-2xl border-l-4 border-l-brand-accent">
+            <h3 class="font-bold text-lg mb-1">Certified Coaches</h3>
+            <p class="text-xs text-gray-400">ISA certified instructors ensuring safety & rapid progress.</p>
+          </div>
+          <div class="glass p-5 rounded-2xl border-l-4 border-l-brand-lime">
+            <h3 class="font-bold text-lg mb-1">Eco-Conscious</h3>
+            <p class="text-xs text-gray-400">Committed to keeping our beaches pristine and plastic-free.</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-3xl overflow-hidden glass aspect-4/3 shadow-2xl border border-white/10">
+          <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1000&q=80" alt="Surfing Vibe" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-6 -left-6 glass p-6 rounded-2xl max-w-xs border border-white/10 hidden sm:block">
+          <p class="text-sm italic text-gray-300 font-serif">"Best vibes, best waves, and the coziest dorms in Alibag."</p>
+          <span class="text-xs font-bold text-brand-cyan mt-2 block">— Traveller Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section (Updated Prices) -->
+  <section id="packages" class="py-24 px-6 bg-gradient-to-b from-transparent via-brand-card to-transparent border-y border-white/5">
+    <div class="max-w-7xl mx-auto space-y-16">
+      <div class="text-center space-y-4 max-w-2xl mx-auto">
+        <span class="text-brand-accent font-bold text-xs uppercase tracking-widest bg-brand-accent/10 px-3 py-1 rounded-md">Rates & Passes</span>
+        <h2 class="text-4xl md:text-6xl font-bold">Choose Your Adventure</h2>
+        <p class="text-gray-400 text-base">Transparent pricing with zero hidden fees. Gear rental included in all surf & SUP sessions.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- SUP Card -->
+        <div class="glass rounded-3xl p-8 flex flex-col justify-between hover:border-brand-cyan/50 transition duration-300 group">
+          <div>
+            <div class="flex justify-between items-start mb-6">
+              <span class="bg-brand-cyan/20 text-brand-cyan text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+              <i class="fa-solid fa-water text-2xl text-brand-cyan group-hover:scale-110 transition"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Stand-Up Paddle (SUP)</h3>
+            <p class="text-gray-400 text-sm mb-6">Glide across calm waters. Perfect for golden hour exploration and core fitness.</p>
+            <div class="mb-8">
+              <span class="text-4xl font-bold">₹1,500</span>
+              <span class="text-gray-400 text-sm"> / session</span>
+            </div>
+            <ul class="space-y-3 text-sm text-gray-300 border-t border-white/10 pt-6 mb-8">
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-lime mr-3"></i> Premium SUP Board & Leash</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-lime mr-3"></i> Certified Guide Assistance</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-lime mr-3"></i> Life jacket provided</li>
+            </ul>
+          </div>
+          <a href="#booking" onclick="selectPackage('SUP Session', 1500)" class="w-full py-4 rounded-2xl glass border border-white/20 hover:bg-brand-cyan hover:text-brand-dark hover:border-brand-cyan font-bold text-center transition">
+            Book SUP Session
+          </a>
+        </div>
+
+        <!-- Surfing Card -->
+        <div class="glass rounded-3xl p-8 flex flex-col justify-between hover:border-brand-accent/50 transition duration-300 group relative overflow-hidden ring-2 ring-brand-accent">
+          <div class="absolute top-0 right-0 bg-brand-accent text-white text-[10px] font-bold uppercase px-4 py-1 rounded-bl-full shadow-lg">Most Booked</div>
+          <div>
+            <div class="flex justify-between items-start mb-6">
+              <span class="bg-brand-accent/20 text-brand-accent text-xs font-bold px-3 py-1 rounded-full">MUST TRY</span>
+              <i class="fa-solid fa-person-surfing text-2xl text-brand-accent group-hover:scale-110 transition"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Beginner Surf Session</h3>
+            <p class="text-gray-400 text-sm mb-6">Catch your first wave! Comprehensive land drill followed by assisted water time.</p>
+            <div class="mb-8">
+              <span class="text-4xl font-bold text-brand-accent">₹1,800</span>
+              <span class="text-gray-400 text-sm"> / session</span>
+            </div>
+            <ul class="space-y-3 text-sm text-gray-300 border-t border-white/10 pt-6 mb-8">
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-3"></i> Soft-top Surfboard Rental</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-3"></i> 1-on-1 Coach Ratio</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-3"></i> Rash Guard & Wax</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-3"></i> Basic Photo Assistance</li>
+            </ul>
+          </div>
+          <a href="#booking" onclick="selectPackage('Beginner Surf Session', 1800)" class="w-full py-4 rounded-2xl bg-brand-accent hover:bg-opacity-90 text-white font-bold text-center transition shadow-lg shadow-brand-accent/30">
+            Book Surf Session
+          </a>
+        </div>
+
+        <!-- Surf & Stay Combo -->
+        <div class="glass rounded-3xl p-8 flex flex-col justify-between hover:border-brand-lime/50 transition duration-300 group">
+          <div>
+            <div class="flex justify-between items-start mb-6">
+              <span class="bg-brand-lime/20 text-brand-lime text-xs font-bold px-3 py-1 rounded-full">VALUE</span>
+              <i class="fa-solid fa-bed text-2xl text-brand-lime group-hover:scale-110 transition"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Surf & Stay Dorm Pass</h3>
+            <p class="text-gray-400 text-sm mb-6">Immerse fully in the surf life. Includes daily sessions and comfortable hostel bunk access.</p>
+            <div class="mb-8">
+              <span class="text-4xl font-bold">₹2,999</span>
+              <span class="text-gray-400 text-sm"> / night</span>
+            </div>
+            <ul class="space-y-3 text-sm text-gray-300 border-t border-white/10 pt-6 mb-8">
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-lime mr-3"></i> 1 Night in AC Surf Dorm</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-lime mr-3"></i> 1 Surf Session Included</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-lime mr-3"></i> Free High-Speed WiFi</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-brand-lime mr-3"></i> Access to Cafe & Common Areas</li>
+            </ul>
+          </div>
+          <a href="#booking" onclick="selectPackage('Surf & Stay Dorm Pass', 2999)" class="w-full py-4 rounded-2xl glass border border-white/20 hover:bg-brand-lime hover:text-brand-dark hover:border-brand-lime font-bold text-center transition">
+            Book Combo Pass
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class="space-y-2">
+          <span class="text-brand-lime font-bold text-xs uppercase tracking-widest bg-brand-lime/10 px-3 py-1 rounded-md">Visual Vibes</span>
+          <h2 class="text-4xl md:text-5xl font-bold">Life at Reevdanda Beach</h2>
+        </div>
+        <p class="text-gray-400 max-w-md text-sm">A glimpse into our daily routine: epic sunrise sessions, chilled cafe evenings, and endless stoke.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="rounded-2xl overflow-hidden glass aspect-square group cursor-pointer border border-white/10">
+          <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=80" alt="Surf Action" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="rounded-2xl overflow-hidden glass aspect-square group cursor-pointer border border-white/10">
+          <img src="https://images.unsplash.com/photo-1522069168774-32879c388bf7?auto=format&fit=crop&w=600&q=80" alt="Surf Camp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="rounded-2xl overflow-hidden glass aspect-square group cursor-pointer border border-white/10">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Beach Sunset" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="rounded-2xl overflow-hidden glass aspect-square group cursor-pointer border border-white/10">
+          <img src="https://images.unsplash.com/photo-1463830395034-fd38ccba62bc?auto=format&fit=crop&w=600&q=80" alt="Cafe Chill" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Getting Here -->
+  <section id="location" class="py-24 px-6 bg-brand-card/50">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <span class="text-brand-accent font-bold text-xs uppercase tracking-widest bg-brand-accent/10 px-3 py-1 rounded-md">Find Us</span>
+        <h2 class="text-4xl md:text-5xl font-bold">Right on the Shoreline</h2>
+        <p class="text-gray-300 text-lg">Located at Revdanda Beach, Alibag. We are tucked away from the city rush, right where the forest meets the ocean.</p>
+        
+        <div class="space-y-4 pt-4">
+          <div class="flex items-start space-x-4">
+            <div class="p-3 glass rounded-xl text-brand-cyan border border-white/10"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4 class="font-bold">Address</h4>
+              <p class="text-sm text-gray-400">Revdanda Beach Road, Revdanda, Alibag, Maharashtra 402202</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="p-3 glass rounded-xl text-brand-lime border border-white/10"><i class="fa-solid fa-car"></i></div>
+            <div>
+              <h4 class="font-bold">Getting There</h4>
+              <p class="text-sm text-gray-400">1. RoPax Ferry from Mumbai (Bhaucha Dhakka) to Mandwa <br> 2. Drive down via Alibag-Revdanda road (approx 45 mins from Mandwa).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden glass h-96 border border-white/10 relative">
+        <!-- Placeholder Map representation -->
+        <div class="w-full h-full bg-slate-800 flex flex-col justify-center items-center text-gray-500 relative">
+          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80" alt="Map View" class="w-full h-full object-cover opacity-40">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+          <div class="z-10 text-center space-y-3 bg-brand-dark/80 backdrop-blur-md p-6 rounded-2xl border border-white/10 max-w-xs">
+            <div class="w-12 h-12 bg-brand-accent text-white rounded-full flex items-center justify-center mx-auto shadow-lg shadow-brand-accent/50 animate-bounce">
+              <i class="fa-solid fa-surfboard"></i>
+            </div>
+            <h4 class="font-bold text-white">Surfing Tales Camp</h4>
+            <p class="text-xs text-gray-300">Revdanda Beach front access</p>
+            <a href="https://maps.google.com" target="_blank" class="inline-block text-xs font-bold text-brand-cyan hover:underline">Open in Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Booking Section -->
+  <section id="booking" class="py-24 px-6 relative">
+    <div class="max-w-4xl mx-auto glass rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl relative">
+      <div class="text-center space-y-4 mb-12">
+        <span class="text-brand-lime font-bold text-xs uppercase tracking-widest bg-brand-lime/10 px-3 py-1 rounded-md">Instant Reservation</span>
+        <h2 class="text-3xl md:text-5xl font-bold">Book Your Spot</h2>
+        <p class="text-gray-400 text-sm">Select your package, choose a date, and confirm your session instantly.</p>
+      </div>
+
+      <form id="bookingForm" onsubmit="handleBooking(event)" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Select Package</label>
+            <select id="packageSelect" onchange="updatePriceFromDropdown()" class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-accent transition">
+              <option value="Beginner Surf Session" data-price="1800">Beginner Surf Session (₹1,800)</option>
+              <option value="SUP Session" data-price="1500">Stand-Up Paddle (SUP) (₹1,500)</option>
+              <option value="Surf & Stay Dorm Pass" data-price="2999">Surf & Stay Dorm Pass (₹2,999)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Preferred Date</label>
+            <input type="date" id="bookingDate" required class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-accent transition">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Full Name</label>
+            <input type="text" id="userName" placeholder="John Doe" required class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-accent transition">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">WhatsApp Number</label>
+            <input type="tel" id="userPhone" placeholder="+91 98765 43210" required class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-accent transition">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
+            <input type="email" id="userEmail" placeholder="john@example.com" required class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-accent transition">
+          </div>
+        </div>
+
+        <div class="glass p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-center border border-white/5 gap-4">
+          <div>
+            <span class="text-xs text-gray-400 uppercase tracking-wider block">Total Amount</span>
+            <span id="displayTotal" class="text-3xl font-extrabold text-brand-lime">₹1,800</span>
+          </div>
+          <button type="submit" class="w-full sm:w-auto bg-gradient-to-r from-brand-accent to-brand-lime text-brand-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-accent/30 hover:opacity-90 transition">
+            Proceed to Pay
+          </button>
+        </div>
+      </form>
+
+      <!-- Confirmation Overlay -->
+      <div id="bookingSuccess" class="hidden absolute inset-0 glass-dark bg-brand-dark/95 backdrop-blur-xl rounded-3xl p-12 flex flex-col items-center justify-center text-center space-y-6 z-20">
+        <div class="w-20 h-20 bg-brand-lime/20 text-brand-lime rounded-full flex items-center justify-center text-3xl animate-bounce">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-3xl font-bold">You're On The List!</h3>
+          <p class="text-gray-400 max-w-sm text-sm">Booking confirmation and location pin have been sent to your WhatsApp and Email.</p>
+        </div>
+        <div class="glass p-4 rounded-xl w-full max-w-xs text-left space-y-1 text-xs">
+          <div class="flex justify-between text-gray-400"><span>Booking ID:</span><span id="confId" class="text-white font-bold">#ST-9982</span></div>
+          <div class="flex justify-between text-gray-400"><span>Activity:</span><span id="confPkg" class="text-white font-bold">Surfing</span></div>
+          <div class="flex justify-between text-gray-400"><span>Date:</span><span id="confDate" class="text-white font-bold">Tomorrow</span></div>
+        </div>
+        <button onclick="resetBooking()" class="text-xs font-bold text-brand-cyan hover:underline">Book Another Session</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-white/10 text-center space-y-6">
+    <span class="text-2xl font-bold tracking-tighter text-brand-accent font-heading block">SURFING TALES</span>
+    <div class="flex justify-center space-x-6 text-xl">
+      <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="hover:text-brand-cyan transition"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="hover:text-brand-lime transition"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <p class="text-xs text-gray-500">© 2026 Surfing Tales. Made with stoke for ocean lovers.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Set minimum date to today
+    document.getElementById('bookingDate').min = new Date().toISOString().split('T')[0];
+
+    function updatePriceFromDropdown() {
+      const select = document.getElementById('packageSelect');
+      const price = select.options[select.selectedIndex].dataset.price;
+      document.getElementById('displayTotal').innerText = `₹${parseInt(price).toLocaleString('en-IN')}`;
+    }
+
+    function selectPackage(packageName, price) {
+      const select = document.getElementById('packageSelect');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value === packageName) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      updatePriceFromDropdown();
+      window.location.href = '#booking';
+    }
+
+    function handleBooking(e) {
+      e.preventDefault();
+      
+      const pkg = document.getElementById('packageSelect').value;
+      const date = document.getElementById('bookingDate').value;
+      const name = document.getElementById('userName').value;
+      const phone = document.getElementById('userPhone').value;
+      const price = document.getElementById('displayTotal').innerText;
+
+      // Simulate saving to Database / Payment processing
+      const bookingData = {
+        bookingId: 'ST-' + Math.floor(1000 + Math.random() * 9000),
+        packageName: pkg,
+        date: date,
+        customerName: name,
+        phone: phone,
+        totalAmount: price,
+        timestamp: new Date().toISOString()
+      };
+
+      console.log('Saving booking to database...', bookingData);
+
+      // Update Confirmation Screen
+      document.getElementById('confId').innerText = bookingData.bookingId;
+      document.getElementById('confPkg').innerText = bookingData.packageName;
+      document.getElementById('confDate').innerText = bookingData.date;
+
+      // Show Success
+      document.getElementById('bookingSuccess').classList.remove('hidden');
+      document.getElementById('bookingForm').reset();
+    }
+
+    function resetBooking() {
+      document.getElementById('bookingSuccess').classList.add('hidden');
+      updatePriceFromDropdown();
+    }
+  </script>
+</body>
+</html>
